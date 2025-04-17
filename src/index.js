@@ -12,13 +12,25 @@ function updateTime() {
   }
 
   let city_2Element = document.querySelector("#city-2");
-  if (city_1Element) {
+  if (city_2Element) {
     let city_2DateElement = city_2Element.querySelector(".date");
     let city_2TimeElement = city_2Element.querySelector(".time");
-    let city_2Time = moment().tz("Europe/London");
+    let city_2Time = moment().tz("Europe/Berlin");
 
     city_2DateElement.innerHTML = city_2Time.format("MMMM Do YYYY");
     city_2TimeElement.innerHTML = city_2Time.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let city_3Element = document.querySelector("#city-3");
+  if (city_3Element) {
+    let city_3DateElement = city_3Element.querySelector(".date");
+    let city_3TimeElement = city_3Element.querySelector(".time");
+    let city_3Time = moment().tz("Africa/Nairobi");
+
+    city_3DateElement.innerHTML = city_3Time.format("MMMM Do YYYY");
+    city_3TimeElement.innerHTML = city_3Time.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
